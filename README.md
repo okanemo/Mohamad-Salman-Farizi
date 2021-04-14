@@ -1,24 +1,17 @@
-# Lumen PHP Framework
+untuk pengecekan api saya menggunakan postman dan saya juga mengeksport hasil request apinya ke github, adapun request api yang saya buat adalah sebagai berikut
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
+## User
+http://localhost:8000/api/v1/user/add
+http://localhost:8000/api/v1/user/
+http://localhost:8000/api/v1/user/{id}/delete
+http://localhost:8000/api/v1/user/{id}
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+## NAB
+http://localhost:8000/api/v1/ib/addNAB
+http://localhost:8000/api/v1/ib/listNAB
 
-## Official Documentation
+## Topup
+http://localhost:8000/api/v1/ib/topup
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## WD
+http://localhost:8000/api/v1/ib/withdraw

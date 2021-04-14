@@ -17,13 +17,23 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/todo', 'todoController@index');
-$router->get('/todo/{id}', 'todoController@show');
-$router->post('/todo/save', 'todoController@store');
-$router->post('/todo/{id}/update', 'todoController@update');
-$router->post('/todo/{id}/delete', 'todoController@destroy');
-
+// user
 $router->get('/api/v1/user', 'V1\RegisterController@index');
 $router->get('/api/v1/user/{id}', 'V1\RegisterController@show');
 $router->post('/api/v1/user/add', 'V1\RegisterController@store');
 $router->post('/api/v1/user/{id}/delete', 'V1\RegisterController@destroy');
+
+$router->post('/api/v1/user/login', 'V1\LoginController@action');
+
+// nab
+$router->get('/api/v1/ib/listNAB', 'V1\NabController@index');
+$router->post('/api/v1/ib/addNAB', 'V1\NabController@store');
+
+// topup
+$router->post('/api/v1/ib/topup', 'V1\TopupController@store');
+
+// wd
+$router->post('/api/v1/ib/withdraw', 'V1\WithdrawController@store');
+
+// balance
+$router->get('/api/v1/ib/balance', 'V1\BalanceController@index');

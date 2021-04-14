@@ -13,6 +13,7 @@ class Users extends Model implements AuthenticatableContract, AuthorizableContra
 {
     use Authenticatable, Authorizable, HasFactory;
 
+    protected $guard = 'users';
     /**
      * The attributes that are mass assignable.
      *
@@ -30,4 +31,8 @@ class Users extends Model implements AuthenticatableContract, AuthorizableContra
     protected $hidden = [
         'password',
     ];
+
+    public function topups(){
+        return $this->hasMany(Topups::class);
+    }
 }
